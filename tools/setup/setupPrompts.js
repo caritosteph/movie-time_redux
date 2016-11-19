@@ -1,19 +1,19 @@
 // Define prompts for use with npm 'prompt' module in setup script
 module.exports = [
   {
-    name: 'projectName',
-    description: 'Project name (default: new-project)',
+    name: 'MovieTime',
+    description: 'Best Movies',
     pattern: /^[^._][a-z0-9\.\-_~]+$/,
     message: 'Limited to: lowercase letters, numbers, period, hyphen, ' +
     'underscore, and tilde; cannot begin with period or underscore.'
   },
   {
-    name: 'version',
+    name: '0.0.1',
     description: 'Version (default: 0.1.0)'
   },
   {
-    name: 'author',
-    description: 'Author'
+    name: 'Carolyn Ulfe',
+    description: ''
   },
   {
     name: 'license',
