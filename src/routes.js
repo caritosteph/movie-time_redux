@@ -3,14 +3,14 @@ import React from 'react';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 import Main from './components/Main.js';
-import Single from './components/Single.js';
+import SingleMovie from './components/SingleMovie.js';
 import MovieGrid from './components/MovieGrid.js';
 
 const router = (
   <Router history = {browserHistory}>
     <Route path="/" component={Main}>
       <IndexRoute component = {MovieGrid}></IndexRoute>
-      <Route path="/view/:postId" component={Single}></Route>
+      <Route path="/view/:postId" component={SingleMovie}></Route>
     </Route>
   </Router>
 )
