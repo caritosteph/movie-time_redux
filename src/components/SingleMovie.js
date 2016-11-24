@@ -9,7 +9,7 @@ class SingleMovie extends Component {
     );
   }
 }
-Single.propTypes = {
+SingleMovie.propTypes = {
 
 };
-export default Single;
+export default SingleMovie;
