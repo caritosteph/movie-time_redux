@@ -5,7 +5,7 @@ class Main extends Component {
     return (
       <div>
         <h1>
-          <Link to="/">MovieTime</Link>
+          <Link to="/">ReduxMovie</Link>
           {React.cloneElement(this.props.children,this.props)}
         </h1>
       </div>
