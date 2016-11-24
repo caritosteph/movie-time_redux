@@ -1,0 +1,7 @@
+export const LOAD_MOVIES = 'LOAD_MOVIES';
+export const SEARCH_MOVIES = 'SEARCH_MOVIES';
+export const MOVIE_DETAIL = 'MOVIE_DETAIL';
+export const ADD_FAVORITES = 'ADD_FAVORITES';
+export const SORT_MOVIES = 'SORT_MOVIES';
+export const FAVORITES_MOVIES = 'FAVORITES_MOVIES';
+export const SHARE_MOVIE = 'SHARE_MOVIE';
