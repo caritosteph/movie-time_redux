@@ -7,8 +7,15 @@ require('./favicon.ico');
 import router from './routes.js';
 import configureStore from './store/configureStore';
 import {syncHistoryWithStore} from 'react-router-redux'
+import {Provider} from 'react-redux';
+
+const app  = document.getElementById('app');
 
 const store  = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 
-render(router, document.getElementById('app'));
+render(
+  <Provider store={store}>
+      <Router history= {history} routes = {router}/>
+  </Provider>
+  ,app);

@@ -1,13 +1,12 @@
 // Set up your root reducer here...
- import { combineReducers } from 'redux';
- import { routerReducer } from 'react-router-redux';
+import {combineReducers} from 'redux';
+import {routerReducer} from 'react-router-redux';
 
-import loadMovies from './loadMoviesReducer.js';
+import movies from './moviesReducer.js';
 
-
-const rootReducer = combineReducers({
-  loadMovies,
+const rootReducer  = combineReducers ({
+  movies,
   routing: routerReducer
-});
+})
 
 export default rootReducer;
