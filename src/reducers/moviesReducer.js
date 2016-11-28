@@ -6,8 +6,6 @@
 import initialState from './initialState';
 
 function movies(state = initialState.movies,action){
-  console.log("Movies");
-  console.log(state,action);
   return state;
 }
 
