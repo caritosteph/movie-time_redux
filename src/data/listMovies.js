@@ -1,6 +1,4 @@
-{
-  "page": 1,
-  "results": [
+const movies = [
     {
       "poster_path": "/9HE9xiNMEFJnCzndlkWD7oPfAOx.jpg",
       "adult": false,
@@ -403,7 +401,6 @@
       "video": false,
       "vote_average": 4.8
     }
-  ],
-  "total_results": 289291,
-  "total_pages": 14465
-}
+  ]
+
+export default movies;

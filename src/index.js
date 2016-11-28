@@ -11,7 +11,10 @@ import {Provider} from 'react-redux';
 
 const app  = document.getElementById('app');
 
-const store  = configureStore();
+import movies from  './data/listMovies.js';
+
+const initialState = {movies};
+const store  = configureStore(initialState);
 const history = syncHistoryWithStore(browserHistory, store);
 
 render(
