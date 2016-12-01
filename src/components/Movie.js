@@ -3,16 +3,13 @@ import {Link} from 'react-router';
 
 const img = "https://image.tmdb.org/t/p/w500";
 
-const Movie = ({movie}) => {
+const Movie = ({movie,addFavorite}) => {
   return (
-    <figure>
       <div>
-        <Link to={`movie/${movie.id}`}>
-          <img src={img + movie.backdrop_path} alt= {movie.title}/>
-          {/* <label>{movie.original_title}</label> */}
-        </Link>
+        <img src={img + movie.backdrop_path} alt= {movie.title}/>
+        <button onClick={addFavorite}>addFavorite</button>
+        <label>Favorited: {movie.favorited? 'SI': 'No'} </label>
       </div>
-    </figure>
   )
 }
 Movie.propTypes = {

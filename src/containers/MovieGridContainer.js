@@ -1,15 +1,31 @@
 import React, {Component} from 'react';
-import Movie from '../components/Movie.js';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {listMovies} from '../actions/actionCreator.js';
+
 import MovieGrid from '../components/MovieGrid.js';
+import MovieContainer from '../containers/MovieContainer.js';
 
 class MovieGridContainer extends Component{
   retrieveMovies(){
     let {listMovies} = this.props;
-    return  listMovies.map((movie,id) =>  <Movie key={id} movie = {movie}/>);
+    return  listMovies.map((movie,id) =>  <MovieContainer key={id} movie = {movie}/>);
   }
   render(){
     return <MovieGrid movies = {this.retrieveMovies()}/> ;
   }
 }
 
-export default MovieGridContainer;
+function mapStateToProps (state){
+  return {
+    listMovies: state.movies
+  }
+}
+//
+function mapDispachToProps (dispatch){
+  return {
+    listMovies: (movies) => dispatch(movies)
+  }
+}
+
+export default connect(mapStateToProps,null)(MovieGridContainer);
