@@ -1,4 +1,7 @@
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
+import * as actionCreators from '../actions/actionCreator.js';
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
@@ -14,4 +17,21 @@ class MainContainer extends Component {
     );
   }
 }
-export default MainContainer;
+// export default MainContainer;
+
+function mapStateToProps (state){
+  return {
+    listMovies: state.movies
+  }
+}
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(actionCreators, dispatch);
+}
+//
+// function mapDispachToProps (dispatch){
+//   return {
+//     listMovies: (movies) => dispatch(movies)
+//   }
+// }
+
+export default connect(mapStateToProps,mapDispatchToProps)(MainContainer);

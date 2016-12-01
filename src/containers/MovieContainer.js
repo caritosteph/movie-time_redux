@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
 import {addFavorite} from '../actions/actionCreator.js';
-
 import Movie from '../components/Movie.js';
 
 class MovieContainer extends Component {
@@ -26,12 +25,15 @@ class MovieContainer extends Component {
   }
 }
 
-// function mapStateToProps(){
-//
-// };
+function mapStateToProps(state){
+  return {
+    listMovies: state.movies
+  }
+}
 function mapDispatchToProps(dispatch){
   return {
     addFavorite: (id) => dispatch(addFavorite(id))
   }
 }
-export default connect(null,mapDispatchToProps)(MovieContainer);
+
+export default connect(mapStateToProps,mapDispatchToProps)(MovieContainer);
