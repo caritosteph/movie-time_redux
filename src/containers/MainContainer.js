@@ -1,7 +1,6 @@
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as actions from '../actions/actionCreator.js';
-import Main from '../components/Main.js';
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
