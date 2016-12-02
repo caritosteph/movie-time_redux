@@ -17,7 +17,6 @@ class MainContainer extends Component {
     );
   }
 }
-// export default MainContainer;
 
 function mapStateToProps (state){
   return {
@@ -27,11 +26,5 @@ function mapStateToProps (state){
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(actionCreators, dispatch);
 }
-//
-// function mapDispachToProps (dispatch){
-//   return {
-//     listMovies: (movies) => dispatch(movies)
-//   }
-// }
 
 export default connect(mapStateToProps,mapDispatchToProps)(MainContainer);

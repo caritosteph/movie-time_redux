@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-// import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-// import {loadMovies} from '../actions/actionCreators.js';
 
 import MovieGrid from '../components/MovieGrid.js';
 import MovieContainer from '../containers/MovieContainer.js';
@@ -21,14 +19,5 @@ function mapStateToProps (state){
     movies: state.movies
   }
 }
-// function mapDispachToProps(dispatch) {
-//   return bindActionCreators(actionCreators, dispatch);
-// }
-//
-// function mapDispatchToProps (dispatch){
-//   return {
-//     loadMovies: (movies) => dispatch(movies)
-//   }
-// }
 
 export default connect(mapStateToProps,null)(MovieGridContainer);
