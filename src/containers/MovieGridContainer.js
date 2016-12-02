@@ -1,4 +1,4 @@
-import React, {Component,PropTypes} from 'react';
+import React, {Component} from 'react';
 // import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 // import {loadMovies} from '../actions/actionCreators.js';
@@ -8,8 +8,8 @@ import MovieContainer from '../containers/MovieContainer.js';
 
 class MovieGridContainer extends Component{
   retrieveMovies(){
-    let {listMovies} = this.props;
-    return  listMovies.map((movie,id) =>  <MovieContainer key={id} movie = {movie}/>);
+    let {movies} = this.props;
+    return  movies.map((movie,id) =>  <MovieContainer key={id} movie = {movie}/>);
   }
   render(){
     return <MovieGrid movies = {this.retrieveMovies()}/> ;
@@ -18,7 +18,7 @@ class MovieGridContainer extends Component{
 
 function mapStateToProps (state){
   return {
-    listMovies: state.movies
+    movies: state.movies
   };
 }
 // function mapDispachToProps(dispatch) {

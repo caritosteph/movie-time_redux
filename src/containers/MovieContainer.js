@@ -10,7 +10,6 @@ class MovieContainer extends Component {
     this.addFavorite = this.addFavorite.bind(this);
   }
   addFavorite(e){
-    console.log(this.props);
     let {movie,addFavorite} = this.props;
     e.preventDefault();
     addFavorite(movie.id);
@@ -21,7 +20,7 @@ class MovieContainer extends Component {
       <Link to={`movie/${movie.id}`}>
         <Movie movie={movie} addFavorite = {this.addFavorite}/>
       </Link>
-    )
+    );
   }
 }
 
