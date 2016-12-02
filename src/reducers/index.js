@@ -7,6 +7,6 @@ import movies from './moviesReducer.js';
 const rootReducer  = combineReducers ({
   movies,
   routing: routerReducer
-});
+})
 
 export default rootReducer;

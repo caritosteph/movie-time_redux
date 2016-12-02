@@ -10,6 +10,7 @@ class MovieContainer extends Component {
     this.addFavorite = this.addFavorite.bind(this);
   }
   addFavorite(e){
+    console.log(this.props);
     let {movie,addFavorite} = this.props;
     e.preventDefault();
     addFavorite(movie.id);
@@ -18,21 +19,21 @@ class MovieContainer extends Component {
     let {movie} = this.props;
     return (
       <Link to={`movie/${movie.id}`}>
-        <Movie movie={movie} addFavorite = {this.addFavorite}/>
+        <Movie {...this.props}  movie={movie} addFavorite = {this.addFavorite}/>
       </Link>
-    );
+    )
   }
 }
 
-function mapStateToProps(state){
-  return {
-    listMovies: state.movies
-  }
-}
+// function mapStateToProps(state){
+//   return {
+//     movies: state.movies
+//   }
+// }
 function mapDispatchToProps(dispatch){
   return {
     addFavorite: (id) => dispatch(addFavorite(id))
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(MovieContainer);
+export default connect(null,mapDispatchToProps)(MovieContainer);

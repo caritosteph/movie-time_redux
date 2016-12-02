@@ -98,26 +98,7 @@ const movies = [
       "vote_count": 3558,
       "video": false,
       "vote_average": 6.8
-    },
-    {
-      "poster_path": "/lFSSLTlFozwpaGlO31OoUeirBgQ.jpg",
-      "adult": false,
-      "overview": "The most dangerous former operative of the CIA is drawn out of hiding to uncover hidden truths about his past.",
-      "release_date": "2016-07-27",
-      "genre_ids": [
-        28,
-        53
-      ],
-      "id": 324668,
-      "original_title": "Jason Bourne",
-      "original_language": "en",
-      "title": "Jason Bourne",
-      "backdrop_path": "/AoT2YrJUJlg5vKE3iMOLvHlTd3m.jpg",
-      "popularity": 25.60297,
-      "vote_count": 1130,
-      "video": false,
-      "vote_average": 5.6
     }
-  ];
+  ]
 
 export default movies;

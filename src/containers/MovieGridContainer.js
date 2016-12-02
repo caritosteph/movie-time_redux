@@ -9,7 +9,7 @@ import MovieContainer from '../containers/MovieContainer.js';
 class MovieGridContainer extends Component{
   retrieveMovies(){
     let {movies} = this.props;
-    return  movies.map((movie,id) =>  <MovieContainer key={id} movie = {movie}/>);
+    return  _.map(movies,(movie,id) =>  <MovieContainer key={id} movie = {movie} {...this.props}/>);
   }
   render(){
     return <MovieGrid movies = {this.retrieveMovies()}/> ;
@@ -19,7 +19,7 @@ class MovieGridContainer extends Component{
 function mapStateToProps (state){
   return {
     movies: state.movies
-  };
+  }
 }
 // function mapDispachToProps(dispatch) {
 //   return bindActionCreators(actionCreators, dispatch);
@@ -31,7 +31,4 @@ function mapStateToProps (state){
 //   }
 // }
 
-// MovieGridContainer.propTypes = {
-//   // listMovies: PropTypes.func.isRequired
-// };
 export default connect(mapStateToProps,null)(MovieGridContainer);
