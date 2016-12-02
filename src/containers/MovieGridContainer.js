@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component,PropTypes} from 'react';
 // import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 // import {loadMovies} from '../actions/actionCreators.js';
@@ -19,7 +19,7 @@ class MovieGridContainer extends Component{
 function mapStateToProps (state){
   return {
     listMovies: state.movies
-  }
+  };
 }
 // function mapDispachToProps(dispatch) {
 //   return bindActionCreators(actionCreators, dispatch);
@@ -31,4 +31,7 @@ function mapStateToProps (state){
 //   }
 // }
 
+// MovieGridContainer.propTypes = {
+//   // listMovies: PropTypes.func.isRequired
+// };
 export default connect(mapStateToProps,null)(MovieGridContainer);

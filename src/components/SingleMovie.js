@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 const SingleMovie = ()=>  {
   return (
@@ -6,6 +6,6 @@ const SingleMovie = ()=>  {
       I'm a single movie
     </div>
   );
-}
+};
 
 export default SingleMovie;

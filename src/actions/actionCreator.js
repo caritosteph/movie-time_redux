@@ -1,12 +1,12 @@
 import * as types from '../constants/actionType';
 
 //load movies
-export function loadMovies(movies){
-  return {
-    type: types.LOAD_MOVIES,
-    movies
-  };
-}
+// export function loadMovies(movies){
+//   return {
+//     type: types.LOAD_MOVIES,
+//     movies
+//   };
+// }
 
 //search movies
 export function searchMovies(movies_name){

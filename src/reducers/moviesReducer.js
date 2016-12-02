@@ -6,19 +6,14 @@
 import initialState from './initialState';
 import * as movieUtil from '../utils/MovieUtil.js';
 
-function movies(state = initialState.movies,action){
+function movies(state = initialState.movies, action){
   switch (action.type) {
     case 'ADD_FAVORITES':
-      console.log("Adding as favorite");
       return Object.assign({},state,movieUtil.replaceMovie(state,action));
-    case 'LOAD_MOVIES':
-        console.log("Adding as favorite");
-        return Object.assign({},state);
     default:
-      return state
+      return state;
 
   }
-  return state;
 }
 
 export default movies;

@@ -10,8 +10,8 @@ const Movie = ({movie,addFavorite}) => {
         <button onClick={addFavorite}>addFavorite</button>
         <label>Favorited: {movie.favorited? 'SI': 'No'} </label>
       </div>
-  )
-}
+  );
+};
 Movie.propTypes = {
 
 };
